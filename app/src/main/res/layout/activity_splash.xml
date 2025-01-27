@@ -1,0 +1,36 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/splashscreen"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:layout_margin="0dp"
+android:background="#03A9F4"
+android:padding="0dp"
+tools:context=".SplashActivity">
+
+<ImageView
+    android:id="@+id/logo"
+    android:layout_width="160dp"
+    android:layout_height="160dp"
+    android:src="@drawable/pdfreaderlogo"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="250dp"
+    android:padding="5dp"
+    android:scaleType="fitXY" />
+
+<TextView
+    android:id="@+id/app_name"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fontFamily="@font/aclonica"
+    android:gravity="center"
+    android:text="@string/app_name"
+    android:textColor="#020E56"
+    android:textSize="34sp"
+    android:textStyle="bold"
+    android:layout_alignBottom="@+id/logo"
+    android:layout_centerHorizontal="true"
+    android:layout_marginBottom="-270dp" />
+
+</RelativeLayout>
