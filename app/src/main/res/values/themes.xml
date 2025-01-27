@@ -1,14 +1,19 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.PDFReader" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="Base.Theme.PDFReader" parent="Theme.AppCompat.Light">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-        <item name="colorPrimary">@color/white</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="colorPrimary">#055CA0</item>
+        <item name="colorOnPrimary">#055CA0</item>
+        <item name="colorPrimaryVariant">#2196F3</item>
+        <item name="colorPrimaryDark">#2196F3</item>
 
-        <item name="android:statusBarColor">#055CA0</item>
+        <item name="android:statusBarColor">#023B6A</item>
 
+    </style>
+
+    <style name="noActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:statusBarColor">#023B6A</item>
     </style>
 
     <style name="Theme.PDFReader" parent="Base.Theme.PDFReader" />
