@@ -9,8 +9,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class PDFviewHolder extends RecyclerView.ViewHolder {
 
-    private TextView tvName;
-    private CardView cardView;
+    public TextView tvName;
+    public CardView cardView;
 
 
     public PDFviewHolder(@NonNull View itemView) {
