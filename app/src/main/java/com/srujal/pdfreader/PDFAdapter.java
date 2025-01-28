@@ -58,4 +58,9 @@ public class PDFAdapter extends RecyclerView.Adapter<PDFviewHolder> {
     public int getItemCount() {
         return list.size();
     }
+
+    public void updateList(List<File> updatedList) {
+        this.list = updatedList;
+        notifyDataSetChanged();
+    }
 }

@@ -51,7 +51,7 @@ dependencies {
 
 //    implementation ("com.github.barteksc:android-pdf-viewer:2.8.2")
 
-    implementation("com.artifex.mupdf:core:1.16.1")
+//    implementation("com.artifex.mupdf:core:1.16.1")
 
 
 }

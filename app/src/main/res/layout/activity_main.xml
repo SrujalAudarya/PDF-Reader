@@ -5,12 +5,23 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="#44A6F2"
     tools:context=".MainActivity">
 
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:queryHint="Search Here"
+        android:background="#A9D6FB"
+        app:iconifiedByDefault="false"
+        android:layout_margin="8dp" />
+
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/pdfRecycleView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/pdfRecycleView"/>
+        android:layout_marginTop="10dp"/>
 
 </LinearLayout>
