@@ -1,6 +1,7 @@
 package com.srujal.pdfreader;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,8 +33,21 @@ public class PDFAdapter extends RecyclerView.Adapter<PDFviewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull PDFviewHolder holder, int position) {
+        File currentFile = list.get(position);
+
         holder.tvName.setText(list.get(position).getName());
         holder.tvName.setSelected(true); // This is necessary for the marquee effect.
+
+        // Check if the PDF is starred
+        SharedPreferences sharedPreferences = context.getSharedPreferences("StarredPrefs", Context.MODE_PRIVATE);
+        boolean isStarred = sharedPreferences.getBoolean(currentFile.getAbsolutePath(), false);
+
+        // Show or hide the star icon based on the starred status
+        if (isStarred) {
+            holder.ivStar.setVisibility(View.VISIBLE);
+        } else {
+            holder.ivStar.setVisibility(View.GONE);
+        }
 
         // Ensure the TextView is focusable and has the proper marquee behavior
         holder.tvName.setFocusable(true);

@@ -156,7 +156,7 @@ public class MainActivity extends AppCompatActivity implements onPDFSelectorList
         }
 
         // Get starred PDFs from SharedPreferences
-        SharedPreferences preferences = getSharedPreferences("StarredPDFs", MODE_PRIVATE);
+        SharedPreferences preferences = getSharedPreferences("StarredPrefs", MODE_PRIVATE);
         List<File> starredList = new ArrayList<>();
         List<File> unstarredList = new ArrayList<>();
 

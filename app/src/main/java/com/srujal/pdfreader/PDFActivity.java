@@ -27,7 +27,7 @@ public class PDFActivity extends AppCompatActivity {
 
         getSupportActionBar().hide();
 
-        preferences = getSharedPreferences("StarredPDFs", MODE_PRIVATE);
+        preferences = getSharedPreferences("StarredPrefs", MODE_PRIVATE);
 
         filePath = getIntent().getStringExtra("path");
         fileName = getIntent().getStringExtra("name");
