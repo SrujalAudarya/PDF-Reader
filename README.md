@@ -61,3 +61,8 @@ The app uses the Dexter library to handle permissions dynamically. If the requir
 - **Android PDF Viewer**: Library for viewing PDF files.
 
 ---
+
+## License
+
+This project is licensed under the MIT License.
+
