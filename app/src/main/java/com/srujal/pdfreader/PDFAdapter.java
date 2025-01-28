@@ -3,6 +3,7 @@ package com.srujal.pdfreader;
 import android.content.Context;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -15,10 +16,12 @@ public class PDFAdapter extends RecyclerView.Adapter<PDFviewHolder> {
 
     private Context context;
     private List<File> list;
+    private onPDFSelectorListener listener;
 
-    public PDFAdapter(Context context, List<File> list) {
+    public PDFAdapter(Context context, List<File> list, onPDFSelectorListener listener) {
         this.context = context;
         this.list = list;
+        this.listener = listener;
     }
 
     @NonNull
@@ -35,6 +38,13 @@ public class PDFAdapter extends RecyclerView.Adapter<PDFviewHolder> {
         // Ensure the TextView is focusable and has the proper marquee behavior
         holder.tvName.setFocusable(true);
         holder.tvName.setFocusableInTouchMode(true);
+
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listener.onPDFSelected(list.get(position));
+            }
+        });
 
         // Optionally, apply some delay before starting the marquee, to ensure it works in a smooth way
         holder.tvName.postDelayed(() -> {

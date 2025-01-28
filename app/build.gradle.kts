@@ -47,4 +47,11 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
 
     implementation (libs.dexter)
+    implementation (libs.android.pdf.viewer)
+
+//    implementation ("com.github.barteksc:android-pdf-viewer:2.8.2")
+
+    implementation("com.artifex.mupdf:core:1.16.1")
+
+
 }

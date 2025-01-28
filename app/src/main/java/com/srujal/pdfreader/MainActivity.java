@@ -25,7 +25,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements onPDFSelectorListener{
 
     private ActivityMainBinding binding;
     private PDFAdapter adapter;
@@ -137,11 +137,18 @@ public class MainActivity extends AppCompatActivity {
             pdfList.addAll(findPdf(storageDir));
         }
 
-        adapter = new PDFAdapter(this, pdfList);
+        adapter = new PDFAdapter(this, pdfList,this);
         binding.pdfRecycleView.setAdapter(adapter);
 
         if (pdfList.isEmpty()) {
             Toast.makeText(this, "No PDF files found.", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    @Override
+    public void onPDFSelected(File file) {
+        Intent intent = new Intent(MainActivity.this, PDFActivity.class);
+        intent.putExtra("path",file.getAbsolutePath());
+        startActivity(intent);
     }
 }
