@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
 import android.provider.Settings;
 import android.widget.Toast;
 
@@ -31,6 +32,8 @@ public class MainActivity extends AppCompatActivity implements onPDFSelectorList
 
     private ActivityMainBinding binding;
     private PDFAdapter adapter;
+
+    private boolean doubleTab = false;
     private List<File> pdfList = new ArrayList<>();
     private List<File> fullPdfList = new ArrayList<>(); // To store the original list
 
@@ -187,5 +190,24 @@ public class MainActivity extends AppCompatActivity implements onPDFSelectorList
         intent.putExtra("path", file.getAbsolutePath());
         intent.putExtra("name",file.getName());
         startActivityForResult(intent, 100); // Request code 100
+    }
+
+    @Override
+    public void onBackPressed(){
+        if (doubleTab) {
+            finishAffinity();
+            super.onBackPressed();
+        }
+        else {
+            doubleTab = true;
+            Toast.makeText(this, "Press again to exit app", Toast.LENGTH_SHORT).show();
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    doubleTab = false;
+                }
+            },2000);
+        }
     }
 }

@@ -15,6 +15,8 @@ import java.io.File;
 
 public class PDFActivity extends AppCompatActivity {
     String filePath, fileName;
+
+    private boolean doubleTab = false;
     private boolean isStarred = false;
     private SharedPreferences preferences;
     private ActivityPdfactivityBinding binding;
@@ -64,5 +66,10 @@ public class PDFActivity extends AppCompatActivity {
         } else {
             btnStar.setImageResource(R.drawable.staricon); // Unfilled star
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }
