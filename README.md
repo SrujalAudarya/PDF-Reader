@@ -12,10 +12,7 @@ This is a simple Android application that displays PDF files stored on your devi
 
 ---
 
-![Screenshot 2025-01-28 235501](https://github.com/user-attachments/assets/9b43c001-d36f-4269-9af2-dd14f61d32a5)
-![Screenshot 2025-01-28 235449](https://github.com/user-attachments/assets/4eee5dfd-0159-4497-b26c-b9e90bf748cd)
-![Screenshot 2025-01-28 235430](https://github.com/user-attachments/assets/130f3631-4813-4043-8bba-d26bccb771b3)
-![Screenshot 2025-01-28 235421](https://github.com/user-attachments/assets/5d9ec95b-6ea3-4737-ba01-d947f83ea2cd)
+<img src="[https://example.com/image.png](https://github.com/user-attachments/assets/9b43c001-d36f-4269-9af2-dd14f61d32a5)" alt="Example Image" width="300">
 
 ## Permissions
 
