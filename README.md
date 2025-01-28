@@ -12,7 +12,7 @@ This is a simple Android application that displays PDF files stored on your devi
 
 ---
 
-<img src="https://example.com/image.png](https://github.com/user-attachments/assets/9b43c001-d36f-4269-9af2-dd14f61d32a5" alt="Example Image" width="300">
+<img src="https://github.com/user-attachments/assets/9b43c001-d36f-4269-9af2-dd14f61d32a5" alt="Example Image" width="300">
 
 ## Permissions
 
