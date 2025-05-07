@@ -60,6 +60,12 @@ The app uses the Dexter library to handle permissions dynamically. If the requir
 - **Dexter**: Simplifies runtime permission handling.
 - **Android PDF Viewer**: Library for viewing PDF files.
 
+- ## Author
+
+[Srujal Audarya](https://github.com/srujalaudarya)
+
+GitHub: srujalaudarya
+
 ---
 
 ## License
